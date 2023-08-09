@@ -6,9 +6,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-import java.sql.SQLOutput;
+import java.util.List;
 
-public class UserStepDefs {
+public class US01_UserStepDefs {
 
     String actualUserCount;
     @Given("Establish the database connection")
@@ -43,5 +43,21 @@ public class UserStepDefs {
         System.out.println("--------------------------------------------------");
         System.out.println("--- CONNECTION WILL BE CLOSED WITH AFTER HOOK -----");
         System.out.println("--------------------------------------------------");
+    }
+
+    @When("Execute query to get all columns")
+    public void execute_query_to_get_all_columns() {
+        String query="select * from users";
+
+        DB_Util.runQuery(query);
+
+        List<String> actualColumnList = DB_Util.getAllColumnNamesAsList();
+
+        System.out.println("actualColumnList = " + actualColumnList);
+
+    }
+    @Then("verify the below columns are listed in result")
+    public void verify_the_below_columns_are_listed_in_result(io.cucumber.datatable.DataTable dataTable) {
+
     }
 }

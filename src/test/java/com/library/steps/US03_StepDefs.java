@@ -11,7 +11,7 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public class us03_StepDefs {
+public class US03_StepDefs {
 
     LoginPage loginPage = new LoginPage();
     BookPage bookPage = new BookPage();
