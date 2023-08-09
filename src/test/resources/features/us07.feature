@@ -1,4 +1,4 @@
-
+@us07 @db @ui
 Feature: Books module
   As a students, I should be able to borrow book
 
