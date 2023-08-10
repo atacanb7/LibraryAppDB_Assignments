@@ -9,3 +9,5 @@
 /*.xml
 /LibraryAppDB_Assignments.iml
 /.idea/
+/target/
+/*.iml

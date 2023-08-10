@@ -33,6 +33,8 @@ public class US03_BookCategoriesStepDefs {
         //bookPage.mainCategoryElement.click();
 
         actualCategories = BrowserUtil.getAllSelectOptions(bookPage.mainCategoryElement);
+        System.out.println("actualCategories = " + actualCategories);
+
         actualCategories.remove(0);
 
         System.out.println("actualCategories = " + actualCategories);
